@@ -28,8 +28,4 @@ This project demonstrates core REST API concepts such as routing, authentication
 
 ---
 
-## 🧾 API Documentation
 
-Once the server is running, you can view interactive documentation:
-
-🔹 **Swagger UI:**  
