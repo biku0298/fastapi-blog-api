@@ -5,14 +5,11 @@ from .database import engine
 from .routers import blog,user,authentication
 from fastapi.responses import HTMLResponse
 app = FastAPI()
+from fastapi.responses import RedirectResponse
 
-@app.get("/", response_class=HTMLResponse)
-def home():
-    return """
-    <h1>FastAPI Blog API</h1>
-    <p>API is running successfully 🚀</p>
-    <a href="/docs">Go to API Docs</a>
-    """
+@app.get("/",tags=["Home"])
+def root():
+    return RedirectResponse(url="/docs")
 
 model.Base.metadata.create_all(bind=engine)
 
